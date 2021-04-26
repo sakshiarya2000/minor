@@ -1,3 +1,8 @@
+<% 
+   if(session.isNew())
+       response.sendRedirect("index.jsp");
+%>
+
 <%@page import="Dao.Dao"%>
 <%! 
   int bid;
@@ -5,7 +10,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/javascript; charset=UTF-8">
         <title>Registration Page</title>
     </head>
     <body>
@@ -20,46 +25,46 @@
                         
                         bid=bd.autoIncr();
                       %>  
-<td><input type="text" name="txtbid" value=<%=bid%>></td>   
+<td><input type="text" name="sno" value=<%=bid%>></td>   
 </tr>   
     
 <tr><th><b><h2>User Name</h2></b></th>
-<td><input type="text" name="txtName" placeholder="Enter User Name"></td>
+<td><input type="text" name="uname" placeholder="Enter User Name"></td>
 </tr>
 
 <tr>
 <th><b><h2>Password</h2></b></th>
-<td><input type="password" name="txtPassword" placeholder="Enter  Password" ></td>
+<td><input type="password" name="pass" placeholder="Enter  Password" ></td>
 </tr>
 
 <tr>
 <th><b><h2>Confirm Password</h2></b></th>
-<td><input type="password" name="txtCpassword" placeholder="Enter  Password" ></td>
+<td><input type="password" name="cpass" placeholder="Enter  Password" ></td>
 </tr>
 
 <tr>
 <th><b><h2>First Name</h2></b></th>
-<td><input type="text" name="txtFname" placeholder="Enter First Name" ></td>
+<td><input type="text" name="fname" placeholder="Enter First Name" ></td>
 </tr>  
 
 <tr>
 <th><b><h2>Last Name</h2></b></th>
-<td><input type="text" name="txtLname" placeholder="Enter  Last Name" ></td>
+<td><input type="text" name="lname" placeholder="Enter  Last Name" ></td>
 </tr>
 
 <tr>
 <th><b><h2>Email Address</h2></b></th>
-<td><input type="email" name="txtEmail" placeholder="Enter  Email Address" ></td>
+<td><input type="email" name="email" placeholder="Enter  Email Address" ></td>
 </tr>
 
 <tr>
 <th><b><h2>Mobile No.</h2></b></th>
-<td><input type="number" name="txtMobile" placeholder="Enter  Mobile" ></td>
+<td><input type="number" name="mobile" placeholder="Enter  Mobile" ></td>
 </tr>
 
 <tr>
 <th><b><h2>Residential Area</h2></b></th>
-<td><input type="text" name="txtAddress" placeholder="Enter  Address" ></td>
+<td><input type="text" name="adr" placeholder="Enter  Address" ></td>
 </tr>
 
 <tr>
