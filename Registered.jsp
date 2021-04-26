@@ -1,8 +1,12 @@
-
+<% 
+   if(session.isNew())
+       response.sendRedirect("index.jsp");
+%>
 <%@page import="Dao.Dao" %>
 <jsp:useBean class="Model.Criminals" id="C">
     <jsp:setProperty property="*" name="C"></jsp:setProperty>  
 </jsp:useBean>
+
 
 
 <html>
@@ -12,12 +16,14 @@
     </head>
     <body>
     <% 
+        
        Dao bd=new Dao();
          if(bd.insertDetails(C)>0)
          {
-         out.println("Record Inserted........");
+         response.sendRedirect("SignIn.jsp");
    
          }
+         
                  %>
     </body>
 </html>
